@@ -13,6 +13,7 @@ const Hero = () => {
                 <h1 className="hero__title">
                     Find, Book, or Rent a Vehicle -- quickly and easily
                 </h1>
+
                 <p className="hero__subtitle">
                     Streamline your vehicle rental experience with our effortless booking experience.
                 </p>
@@ -22,6 +23,14 @@ const Hero = () => {
                     containerStyles="bg-primary-blue text-white rounded-full mt-10"
                     handleClick={handleScroll}
                 />
+
+                <div className="hero__image-container">
+                    <div className="hero__image">
+                        <Image src="/hero2.png" alt="hero" fill className="object-contain"/>
+                        <div className="hero__image-overlay"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     )
