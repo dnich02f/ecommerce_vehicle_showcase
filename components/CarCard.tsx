@@ -12,9 +12,11 @@ interface CarCardProps {
 const CarCard = ({car}: CarCardProps) => {
     // destructure car properties
     const { city_mpg, year, make, model,
-        transmission, drive } = car
+        transmission, drive } = car;
 
-    const carRent = calculateCarRent(city_mpg, year)
+    const carRent = calculateCarRent(city_mpg, year);
+
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className={"car-card group"}>
@@ -58,6 +60,17 @@ const CarCard = ({car}: CarCardProps) => {
                         </p>
                     </div>
                 </div>
+
+                <div className={"car-card__btn-container"}>
+                    <CustomButton
+                        title={"View More"}
+                        containerStyles={"w-full py-[16px] bg-primary-blue"}
+                        textStyles={"text-white text-[14px] leading-[17px] fond-bold"}
+                        rightIcon={"/right-arrow.svg"}
+                        handleClick={() => setIsOpen(true)}
+                    />
+                </div>
+
             </div>
         </div>
     )
