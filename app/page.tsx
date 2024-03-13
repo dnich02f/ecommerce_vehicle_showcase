@@ -4,6 +4,7 @@ import React, {Fragment} from "react";
 import {fetchCars} from "@/utils";
 import {yearsOfProduction, fuels} from "@/constants";
 
+// @ts-ignore
 export default async function Home({ searchParams }) {
   const allCars = await fetchCars({
       manufacturer: searchParams.manufacturer || '',
@@ -47,7 +48,6 @@ export default async function Home({ searchParams }) {
                       car={car}
                       />)}
               </div>
-
               <ShowMore
                 pageNumber={(searchParams.limit || 10) / 10 }
                 isNext={(searchParams.limit || 10) > allCars.length}
