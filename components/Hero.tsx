@@ -4,8 +4,9 @@ import {CustomButton} from "@/components/index";
 
 const Hero = () => {
     const handleScroll = () => {
+ window.location.hash = 'search-manufacturer';
+};
 
-    }
 
     return (
         <div className="hero">
