@@ -23,10 +23,10 @@ export default async function Home({ searchParams }) {
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
             <h1 className="text-4xl font-extrabold">
-                Vehicle Catalogue
+                Car Catalogue
             </h1>
             <p>
-                Explore the vehicles you might like
+                Explore the cars you might like
             </p>
 
             <div className="home__filters">
