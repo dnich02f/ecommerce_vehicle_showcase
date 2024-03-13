@@ -22,6 +22,7 @@ export interface CarProps {
     combination_mpg: number;
     cylinders: number;
     displacement: number;
+
     drive: string;
     fuel_type: string;
     highway_mpg: number;
@@ -37,4 +38,19 @@ export interface FilterProps {
     fuel: string,
     limit: number,
     model: string,
+}
+
+export interface OptionProps {
+    title: string,
+    value: string,
+}
+
+export interface CustomFilterProps {
+    title: string,
+    options: OptionProps[];
+}
+
+export interface ShowMoreProps {
+    pageNumber: number,
+    isNext: boolean,
 }
